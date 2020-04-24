@@ -1,0 +1,389 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+DatosAleatorios
+</name>
+</assembly>
+<members>
+<member name="M:ProInf.BaseDatosAleatoria.CifrasEnLetras.convertirCifrasEnLetras(System.String)">
+	<see cref="!:convertirCifrasEnLetras(string, Genero, string)"/>
+</member><member name="M:ProInf.BaseDatosAleatoria.CifrasEnLetras.convertirCifrasEnLetrasMasculinas(System.String)">
+	<see cref="!:convertirCifrasEnLetras(string, Genero, string)"/>
+</member><member name="M:ProInf.BaseDatosAleatoria.CifrasEnLetras.convertirCifrasEnLetrasFemeninas(System.String)">
+	<see cref="!:convertirCifrasEnLetras(string, Genero, string)"/>
+</member><member name="M:ProInf.BaseDatosAleatoria.CifrasEnLetras.convertirNumeroEnLetras(System.String)">
+ @see #convertirNumeroEnLetras(string, int, string, string, bool, string, string, bool) 
+
+</member><member name="M:ProInf.BaseDatosAleatoria.CifrasEnLetras.convertirNumeroEnLetras(System.String,System.Int32)">
+ @see #convertirNumeroEnLetras(string, int, string, string, bool, string, string, bool) 
+
+</member><member name="M:ProInf.BaseDatosAleatoria.CifrasEnLetras.convertirNumeroEnLetras(System.String,System.String)">
+ @see #convertirNumeroEnLetras(string, int, string, string, bool, string, string, bool) 
+
+</member><member name="M:ProInf.BaseDatosAleatoria.CifrasEnLetras.convertirNumeroEnLetras(System.String,System.String,System.Boolean)">
+ @see #convertirNumeroEnLetras(string, int, string, string, bool, string, string, bool) 
+
+</member><member name="M:ProInf.BaseDatosAleatoria.CifrasEnLetras.convertirNumeroEnLetras(System.String,System.Int32,System.String,System.String)">
+ @see #convertirNumeroEnLetras(string, int, string, string, bool, string, string, bool) 
+
+</member><member name="M:ProInf.BaseDatosAleatoria.CifrasEnLetras.convertirNumeroEnLetras(System.String,System.Int32,System.String,System.String,System.Boolean,System.Boolean)">
+ @see #convertirNumeroEnLetras(string, int, string, string, bool, string, string, bool) 
+
+</member><member name="M:ProInf.BaseDatosAleatoria.CifrasEnLetras.procesarEnLetras(System.String,System.String,System.String,System.Boolean)">
+ Función auxiliar de <code>convertirNumeroEnLetras</code>
+ para procesar por separado la parte entera y la parte decimal
+ <see cref="!:convertirCifrasEnLetras(string, bool, string)"/>
+</member><member name="M:ProInf.BaseDatosAleatoria.CifrasEnLetras.convertirEurosEnLetras(System.Int64)">
+	<see cref="!:convertirEurosEnLetras(string, int)"/>
+</member><member name="M:ProInf.BaseDatosAleatoria.CifrasEnLetras.convertirEurosEnLetras(System.Double)">
+	<see cref="!:convertirEurosEnLetras(string, int)"/>
+</member><member name="P:ProInf.BaseDatosAleatoria.My.Resources.Resources.ResourceManager">
+	<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member><member name="P:ProInf.BaseDatosAleatoria.My.Resources.Resources.Culture">
+	<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso con establecimiento inflexible de tipos.
+</summary>
+</member><member name="P:ProInf.BaseDatosAleatoria.My.Resources.Resources.array_adjetivos">
+	<summary>
+  Busca una cadena traducida similar a cauto
+abierto
+abstracto
+aburrido
+ácida
+agotado
+albo
+alto
+amoroso
+ancha
+ansioso
+arriesgado
+artístico
+audaz
+aurífero
+azul
+bajo
+blanco
+bondadoso
+bonito
+brillante
+bueno
+caliente
+cómico
+compasivo
+cortés
+cruel
+culto
+deportivo
+difícil
+dulce
+eficiente
+enfermo
+estricto
+estudioso
+etéreo
+fácil
+feo
+frío
+fuerte
+gélido
+generoso
+gentil
+gordo
+grande
+hermoso
+honesto
+humilde
+independiente
+inquebrantable
+inteligente
+interesante
+joven
+lenta
+liberal
+listo
+llorosa
+luminoso
+madura
+mala
+malcriado
+marrón
+menguante
+mentiroso
+moderno [resto de la cadena truncado]";.
+</summary>
+</member><member name="P:ProInf.BaseDatosAleatoria.My.Resources.Resources.array_apellidos">
+	<summary>
+  Busca una cadena traducida similar a 2467,Roma
+2467,Buzón
+2470,Sanguino
+2472,Matesanz
+2475,Del Rosario
+2476,Igual
+2477,San Emeterio
+2478,José
+2483,Manresa
+2485,Planells
+2486,Victoria
+2488,Ciobanu
+2492,Lazar
+2493,Mayol
+2494,De Souza
+2494,Bustillo
+2494,Lorite
+2494,Orti
+2494,Recuero
+2495,Manchón
+2498,Salva
+2498,Verges
+2500,Miñano
+2501,Gamiz
+2502,Villalonga
+2504,Queralt
+2509,Bañon
+2512,Bethencourt
+2512,Tinoco
+2515,Cancela
+2518,Montaña
+2518,Vivar
+2518,Ji
+2521,Espínola
+2522,Cabanes
+2523,Arriaga
+2523,Herrador
+2525,Limón
+2525,Mozo
+2525,Ilie
+2527,Cara
+ [resto de la cadena truncado]";.
+</summary>
+</member><member name="P:ProInf.BaseDatosAleatoria.My.Resources.Resources.array_comunes">
+	<summary>
+  Busca una cadena traducida similar a irá,69,V
+real,69
+don,69
+regalo,69
+fuimos,69
+bonito,70
+montón,70
+hacerle,70
+barco,70
+entiendes,70
+maldición,70
+teniente,70
+carne,70
+dejo,71
+pelo,71
+gobierno,71
+pie,71
+corre,71
+últimos,71
+abrir,71
+siguiente,71
+misión,71
+llevas,71
+regreso,71
+existe,71
+quienes,71
+miles,71
+tanta,71
+encontrado,71
+secreto,71
+solía,72
+daño,72
+tengan,72
+pon,72
+perdí,72
+llamaré,72
+empieza,72
+conocer,72
+estuviera,72
+ley,72
+quieras,72
+acabar,72
+podrá,72
+dra.,72
+salga,73
+preguntas,73
+llamó,73
+base,73
+tuvimos,73
+luna,73
+habías,73
+ocho,73 [resto de la cadena truncado]";.
+</summary>
+</member><member name="P:ProInf.BaseDatosAleatoria.My.Resources.Resources.array_definidos">
+	<summary>
+  Busca una cadena traducida similar a Codigo Binario = 8 de 10 
+Codigo Color = 6 de 0123456789ABCDEF 
+Codigo Genoma = 8 de GTCA 
+Fecha Caducidad = entre 2012-01-01 y 2012-12-31
+Hora Entrada = entre 06:00 y 12:00
+Moneda Importe = entre 0 y 10000 unidad 0,05
+Moneda Precio = entre 40000 y 200000 unidad 500
+Logico SiNo = False, True
+Lista Equipo = Estudiante, Juvenil, Deportivo, Olímpico, Atlético, Gimnasta, Universitario, Lúdico, Académico, Campestre, Acrobático, Marítimo
+Lista Inmueble = Casa, Industrial, Local, Oficina, Parking, Piso, S [resto de la cadena truncado]";.
+</summary>
+</member><member name="P:ProInf.BaseDatosAleatoria.My.Resources.Resources.array_municipios">
+	<summary>
+  Busca una cadena traducida similar a 20040,Moguer,24
+20105,Teguise,43
+20269,Alhama de Murcia,45
+20360,Aspe,48
+20407,Guadix,32
+20418,Rosas,28
+20450,Manlleu,50
+20481,Algete,51
+20535,Guía de Isora,40
+20597,Ayamonte,24
+20622,Pájara,43
+20730,Alfafar,49
+20755,Ribarroja del Turia,49
+20862,Baena,35
+20935,Carcagente,49
+20948,Los Llanos de Aridane,40
+20953,Rojales,48
+21025,San Juan de Aznalfarache,46
+21097,Maracena,32
+21100,Mairena del Alcor,46
+21111,Puebla de Vallbona,49
+21216,Lalín,36
+21220,Bétera,49
+21266,Cabra,35
+21268,Piélagos,27
+21282,Las Torres d [resto de la cadena truncado]";.
+</summary>
+</member><member name="P:ProInf.BaseDatosAleatoria.My.Resources.Resources.array_nombres">
+	<summary>
+  Busca una cadena traducida similar a 160,Mariem,0
+161,Saida,0
+165,Samir,1
+170,Sufian,1
+175,Laila,0
+175,Salma,0
+183,Farida,0
+189,Mina,0
+191,Erhimo,0
+193,Dunia,0
+194,Hamed,1
+205,Habiba,0
+206,Dina,0
+207,Yusef,1
+217,Fátima Sohora,0
+218,Nabil,1
+223,Adam,1
+230,Sohora,0
+234,Soraya,0
+238,Mimount,0
+244,Samira,0
+249,Abdeselam,1
+251,Farah,0
+260,María África,0
+263,Rahma,0
+269,Mimoun,1
+275,Karima,0
+288,Mariam,0
+317,Nora,0
+343,Yamina,0
+359,María Fuencisla,0
+364,Rachida,0
+364,Naima,0
+374,Alí,1
+408,Omar,1
+415,Fadma,0
+418,Karim,1
+433,Nadia,0
+446,Rachid,1
+447,S [resto de la cadena truncado]";.
+</summary>
+</member><member name="P:ProInf.BaseDatosAleatoria.My.Resources.Resources.array_palabras">
+	<summary>
+  Busca una cadena traducida similar a Abdicación,La
+Abastecimiento,El
+Abceso,El
+Abdomen,El
+Abecedario,El
+Abeja,La
+Abiótico,El
+Abnegación,La
+Abovedado,Lo
+Abraham,El
+Abrasivo,El
+Abreviatura,La
+Abrupto,El
+Absolución,La
+Absorción,La
+Abstención,La
+Abstinencia,La
+Abstracción,La
+Abstracto,Lo
+Abundancia,La
+Acaecimiento,El
+Acceso,El
+Accesible,Lo
+Accesorio,Lo
+Acepción,La
+Aceptación,La
+Aconsejable,Lo
+Acribillamiento,El
+Acrobacia,La
+Actitud,La
+Actividad,La
+Acusación,La
+Adaptación,La
+Adherencia,La
+Adherente,El
+Adhesión,La
+Adhesivo,El
+Adicción,La
+Adivinanza, [resto de la cadena truncado]";.
+</summary>
+</member><member name="P:ProInf.BaseDatosAleatoria.My.Resources.Resources.array_provincias">
+	<summary>
+  Busca una cadena traducida similar a Teruel,44,978
+Soria,42,975
+Huesca,22,974
+Segovia,40,921
+Cuenca,16,969
+Ávila,05,920
+Zamora,49,980
+Melilla,52,95
+Ceuta,51,956
+Palencia,34,979
+Lugo,27,982
+Orense,32,988
+Guadalajara,19,949
+Cáceres,10,927
+Lérida,25,973
+Salamanca,37,923
+La Rioja,26,941
+Toledo,45,925
+Ciudad Real,13,926
+León,24,987
+Álava,01,945
+Burgos,09,947
+Albacete,02,967
+Navarra,31,948
+Huelva,21,959
+Jaén,23,953
+Badajoz,06,924
+Cantabria,39,942
+Gerona,17,972
+Guipúzcoa,20,943
+Valladolid,47,983
+Castellón,12,964
+Granada,18,958
+Almería,04,950
+Tarragon [resto de la cadena truncado]";.
+</summary>
+</member><member name="T:ProInf.BaseDatosAleatoria.My.Resources.Resources">
+	<summary>
+  Clase de recurso con establecimiento inflexible de tipos, para buscar cadenas traducidas, etc.
+</summary>
+</member>
+</members>
+</doc>
