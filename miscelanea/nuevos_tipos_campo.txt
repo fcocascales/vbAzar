@@ -1,0 +1,19 @@
+# Cartilla de ahorros
+
+
+Fecha Fecha = entre 2012-01-01 y 2012-12-31
+Combinado Concepto,Importe = 4:sgab,importe1 agbar,importe2 12:cajero,importe3
+
+Codigo sgab = 8 de 0123456789 formato 'SGAB C?'
+Codigo agbar = 8 de 0123456789 formato 'AGBAR MANTENIMIENTO C?'
+Codigo cajero = 16 de 0123456789 formato 'CAJERO ?'
+
+Moneda importe1 = entre -60 y -30 unidad 0.01
+Moneda importe2 = entre -10 y -5 unidad 0.01
+Moneda importe3 = entre -200 y -10 unidad 1
+
+
+-------------------------------
+
+
+----------------------------------

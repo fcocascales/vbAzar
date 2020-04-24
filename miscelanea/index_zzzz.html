@@ -1,0 +1,938 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  
+  <style type="text/css">
+  body { font-family:Verdana, Arial, Helvetica, sans-serif; }
+  </style>
+  <title>Untitled Document</title>
+
+  
+  
+  <style type="text/css">
+  .tabla { border-collapse:collapse;  background:#eec; }
+  .tabla th, .tabla td { font-size:11pt; border:none; border-bottom:1px solid #dcc; }
+  .tabla td { padding:.5em; }
+  .tabla td:last-child { border-right:1px solid #dcc; }
+  .tabla th { font-weight:normal; color:#333; background:#edd; }
+  .tabla thead th { background:#cbb; }
+  .tabla tbody th { padding:.5em; text-align:left !important; vertical-align:middle; }
+  .tabla th.tablagrupo { font-weight:bold;  }
+  .tabla tbody tr:nth-child(even)  th { background:#dcc; }
+  .tabla tbody tr:nth-child(even) td { background:#ffc; }
+  .tabla td.mal { color:#c00; }
+  .tabla th.par   { background:#edd !important; }
+  .tabla th.impar { background:#dcc !important; }
+  </style>
+</head><body>
+<div class="infraextracto">
+<p> <a href="%5B%5BPERMALINK%5D%5D" class="img"> <img src="%5B%5BBASE_URL%5D%5D/miscelanea/dado128.png" alt="Dado" align="right" border="0" height="128" width="128" /> </a> Rellena una
+tabla con datos aleatorios. Los formatos de exportación posible son:
+CSV, tabuladores, espaciado, JSON, XML, HTML, XLS y SQL. Se pueden
+seleccionar los campos de unos ya predefinidos o se puede agregar
+nuevos campos personalizados. </p>
+</div>
+
+<div class="infracuerpo">
+<h2>Descargar</h2>
+<ul>
+  <li><a href="%5B%5BBASE_URL%5D%5D/bin/Release/DatosAleatorios.exe.7z"><strong>DatosAleatorios.exe.7z</strong></a></li>
+  <ul>
+    <li>Ejecutable para MS-Windows</li>
+    <li>Requiere tener instalado el <q>Microsoft .NET Framework 3.5</q></li>
+  </ul>
+  <li><a href="%5B%5BBASE_URL%5D%5D../bdAzar_codigo.7z">bdAzar_codigo.7z</a></li>
+  <ul>
+    <li>Código fuente en Visual Basic .NET</li>
+  </ul>
+</ul>
+<h2>Modo de empleo</h2>
+<h3>Ventana principal</h3>
+<img src="%5B%5BBASE_URL%5D%5D/miscelanea/formGenerar.png" alt="formGenerar.png" />
+<ol>
+  <li>Marca los campos predefinidos y los campos a medida que quieras
+obtener</li>
+  <li>Indica el número total de registros</li>
+  <li>Selecciona el formato de archivo que vas a crear</li>
+  <li>Pulsa el botón <q>Generar</q></li>
+</ol>
+<h3>Personalizar un campo</h3>
+<img src="%5B%5BBASE_URL%5D%5D/miscelanea/formCampo.png" alt="formCampo.png" />
+<ol>
+  <li>En la ventana principal pulsa el botón <q>nuevo</q> o <q>editar</q></li>
+  <li>Pon un nombre al campo</li>
+  <li>Elige el tipo de campo marcando una de las pestañas</li>
+  <li>Rellena las propiedades adicionales que hubiese</li>
+  <li>Opcionalmente pulsa el botón <q>prueba</q> para ver un ejemplo</li>
+  <li>Pulsa el botón <q>Aceptar</q></li>
+</ol>
+<h2>Ejemplos</h2>
+<h3>Base de datos de inmuebles</h3>
+<p>Los campos a seleccionar o crear son:</p>
+
+
+<table class="tabla">
+  <thead> <tr>
+    <th>Tipo<br />
+    </th>
+    <th>Nombre<br />
+    </th>
+    <th>Valor<br />
+    </th>
+  </tr>
+  </thead> <tbody>
+    <tr>
+      <th class="tablagrupo">Fecha<br />
+
+      </th>
+      <td>Fecha<br />
+      </td>
+      <td>= entre 2012-01-01 y 2012-12-31<br />
+      </td>
+    </tr>
+    <tr>
+      <th class="tablagrupo">Lista<br />
+
+      </th>
+      <td>Inmueble
+      </td>
+      <td>= Casa, Industrial, Local, Oficina, Parking, Piso, Suelo<br />
+      </td>
+    </tr>
+    <tr>
+      <th class="tablagrupo">Lista
+      </th>
+      <td>Operacion
+      </td>
+      <td>= Alquiler, Venta
+      </td>
+    </tr>
+    <tr>
+      <th class="tablagrupo">Lista
+      </th>
+      <td>Vendedor
+      </td>
+      <td>= Fulano, Mengano, Zutano, Perengano
+      </td>
+    </tr>
+    <tr>
+      <th class="tablagrupo">Rango
+      </th>
+      <td>Superficie
+      </td>
+      <td>= entre 40 y 300
+      </td>
+    </tr>
+    <tr>
+      <th class="tablagrupo">Moneda
+      </th>
+      <td>Precio
+      </td>
+      <td>= entre 40000 y 200000 unidad 500
+      </td>
+    </tr>
+    
+    
+  </tbody>
+</table>
+<p>El número de registros: <span style="font-weight: bold;">3000</span><br />
+El formato de exportación: <span style="font-weight: bold;">CSV</span><br />
+El nombre del archivo: <span style="font-weight: bold;">inmuebles.csv</span><br />
+</p>
+
+<h2>Características</h2>
+<ul>
+  <li>Los valores de los campos predefinidos se generan ponderando su
+frecuencia</li>
+  <li>Los campos personalizados se guardan automáticamente</li>
+</ul>
+<h2>Mejoras posibles</h2>
+<ul>
+  <li>Pasar el programa a MonoDevelop y los formularios a GTK para que
+vaya en Linux</li>
+  <li>Añadir la posibilidad de escribir guiones para generar varias
+tablas</li>
+  <li>Añadir la generación de páginas web: párrafos, listas, etc.</li>
+  <li>Posibilidad de generar códigos con formatos a medida</li>
+  <li>Añadir campos múltiples formados por varias campos personalizados</li>
+  <li>Inventar palabras ponderando la frecuencia de las sílabas más
+usadas</li>
+</ul>
+<h2>Formatos de exportación</h2>
+<p>Tabla comparativa de como importan el Calc y el Excel los ficheros
+generados por este programa</p>
+<table class="tabla">
+  <thead> <tr>
+    <td><br />
+    </td>
+    <td><br />
+    </td>
+    <th>LibreOffice 3.4 Calc</th>
+    <th>Microsoft Excel 2007</th>
+  </tr>
+  </thead> <tbody>
+    <tr>
+      <th class="tablagrupo">CSV</th>
+      <th>Valores separados por punto y coma</th>
+      <td>BIEN, mediante asistente automático</td>
+      <td class="mal">MAL, codificación incorrecta como ANSI</td>
+    </tr>
+    <tr>
+      <th class="tablagrupo">TAB</th>
+      <th>Valores separados por tabulador</th>
+      <td>BIEN, haciendo en el archivo <q>Abrir con</q></td>
+      <td>BIEN, mediante asistente automático</td>
+    </tr>
+    <tr>
+      <th class="tablagrupo">PRN</th>
+      <th>Alineado por espacios en blanco</th>
+      <td>BIEN, haciendo en el archivo <q>Abrir con</q></td>
+      <td>BIEN, mediante asistente</td>
+    </tr>
+    <tr>
+      <th class="tablagrupo">XLS</th>
+      <th>Hoja de cálculo Excel como XML</th>
+      <td>BIEN, aunque toma fecha como texto</td>
+      <td>BIEN</td>
+    </tr>
+    <tr>
+      <th class="tablagrupo">XML</th>
+      <th>Datos de intercambio</th>
+      <td class="mal">MAL, error de entrada y salida</td>
+      <td>BIEN, lo convierte en tabla</td>
+    </tr>
+    <tr>
+      <th class="tablagrupo">HTML</th>
+      <th>Página web</th>
+      <td>BIEN, haciendo en el archivo <q>Abrir con</q></td>
+      <td>BIEN, formatea los títulos</td>
+    </tr>
+    <tr>
+      <th class="tablagrupo">SQL</th>
+      <th>Lenguaje de base de datos</th>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th class="tablagrupo">JSON</th>
+      <th>Datos en Javascript </th>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Campos predefinidos</h2>
+<table class="tabla">
+  <thead> <tr>
+    <td><br />
+    </td>
+    <th>Características</th>
+    <th>Ejemplo</th>
+    <th>Relación con</th>
+  </tr>
+  </thead> <tbody>
+    <tr>
+      <th class="tablagrupo">Id</th>
+      <th>Autonumérico </th>
+      <td>26</td>
+      <th>-</th>
+    </tr>
+    <tr>
+      <th class="tablagrupo">Nombre</th>
+      <th>Ponderado según estadísticas</th>
+      <td>María</td>
+      <th>-</th>
+    </tr>
+    <tr>
+      <th class="tablagrupo">Apellido1</th>
+      <th>Ponderado según estadísticas</th>
+      <td>Rodríguez</td>
+      <th>-</th>
+    </tr>
+    <tr>
+      <th class="tablagrupo">Apellido2</th>
+      <th>Ponderado según estadísticas</th>
+      <td>García</td>
+      <th>-</th>
+    </tr>
+    <tr>
+      <th class="tablagrupo">Sexo</th>
+      <th>H=hombre y M=mujer</th>
+      <td>M</td>
+      <th>Nombre</th>
+    </tr>
+    <tr>
+      <th class="tablagrupo">Nif</th>
+      <th>Aleatorio</th>
+      <td>94766886D</td>
+      <th>-</th>
+    </tr>
+    <tr>
+      <th class="tablagrupo">Dirección</th>
+      <th>Aleatorio</th>
+      <td>Paseo la Parsimonia 140, 6º</td>
+      <th>-</th>
+    </tr>
+    <tr>
+      <th class="tablagrupo">Municipio</th>
+      <th>Ponderado según estadísticas</th>
+      <td>Torrelavega</td>
+      <th>-</th>
+    </tr>
+    <tr>
+      <th class="tablagrupo">Provincia</th>
+      <th>Ponderado según estadísticas</th>
+      <td>Cantabria</td>
+      <th>Municipio</th>
+    </tr>
+    <tr>
+      <th class="tablagrupo">Cp</th>
+      <th>Código postal</th>
+      <td>39390</td>
+      <th>Provincia</th>
+    </tr>
+    <tr>
+      <th class="tablagrupo">Movil</th>
+      <th>Aleatorio</th>
+      <td>680-976-199</td>
+      <th>-</th>
+    </tr>
+    <tr>
+      <th class="tablagrupo">Teléfono</th>
+      <th>Aleatorio</th>
+      <td>942-126-338</td>
+      <th>Provincia</th>
+    </tr>
+    <tr>
+      <th class="tablagrupo">Correo</th>
+      <th>Aleatorio</th>
+      <td>mariarodriguez@correo.com</td>
+      <th>Nombre y Apellido1</th>
+    </tr>
+    <tr>
+      <th class="tablagrupo">Nacimiento</th>
+      <th>Aleatorio</th>
+      <td>1991-11-17</td>
+      <th>-</th>
+    </tr>
+    <tr>
+      <th class="tablagrupo">Edad</th>
+      <th>Aleatorio</th>
+      <td>20</td>
+      <th>Nacimiento</th>
+    </tr>
+    <tr>
+      <th class="tablagrupo">Matrícula</th>
+      <th>Aleatorio</th>
+      <td>4084 LRR</td>
+      <th>-</th>
+    </tr>
+  </tbody>
+</table>
+<h2>Tipo de campos a medida</h2>
+<table class="tabla">
+  <thead> <tr>
+    <th>Campo</th>
+    <th>Ejemplo</th>
+    <th>Resultado</th>
+  </tr>
+  </thead> <tbody>
+    <tr>
+      <th class="tablagrupo">Código</th>
+      <td><strong>Caracteres</strong>=ABC<br />
+      <strong>Número</strong>=10</td>
+      <td>CCBBABAACB</td>
+    </tr>
+    <tr>
+      <th class="tablagrupo">Lista</th>
+      <td><strong>Valores</strong>=<br />
+Arriba<br />
+Centro<br />
+Abajo</td>
+      <td>Abajo</td>
+    </tr>
+    <tr>
+      <th class="tablagrupo">Rango</th>
+      <td><strong>Mínimo</strong>=0<br />
+      <strong>Máximo</strong>=100<br />
+      <strong>Numeral</strong>=Arábiga</td>
+      <td>47</td>
+    </tr>
+    <tr>
+      <th class="tablagrupo">Moneda</th>
+      <td><strong>Desde</strong>=0<br />
+      <strong>Hasta</strong>=10000<br />
+      <strong>Unidad</strong>=0,20</td>
+      <td>484,60</td>
+    </tr>
+    <tr>
+      <th class="tablagrupo">Fecha</th>
+      <td><strong>Desde</strong>=01/01/2012<br />
+      <strong>Hasta</strong>=31/12/2012<br />
+      <strong>Semana</strong>=LMXJV</td>
+      <td>2012-09-17</td>
+    </tr>
+    <tr>
+      <th class="tablagrupo">Hora</th>
+      <td><strong>Desde</strong>=09:00<br />
+      <strong>Hasta</strong>=18:00</td>
+      <td>17:03</td>
+    </tr>
+    <tr>
+      <th class="tablagrupo">Lógico</th>
+      <td>TRUE o FALSE</td>
+      <td>FALSE</td>
+    </tr>
+    <tr>
+      <th class="tablagrupo">Texto</th>
+      <td>Número de palabras: <br />
+      <strong>Desde</strong>=2<br />
+      <strong>Hasta</strong>=10</td>
+      <td>Papá la ah tu sabe</td>
+    </tr>
+    <tr>
+      <th class="tablagrupo">Contador</th>
+      <td><strong>Inicio</strong>=1000<br />
+      <strong>Incremento</strong>=10<br />
+      <strong>Numeral</strong>=Internacional<br />
+      <strong>Palabra</strong>=byte;bytes<br />
+      <strong>Femenina</strong>=no</td>
+      <td>Un kilobyte</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Tipos de numerales</h2>
+<h3>Primeros valores</h3>
+<table class="tabla">
+  <thead> <tr>
+    <th>Tipo</th>
+    <th>Nombre</th>
+    <th>Primeros valores</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="5" class="tablagrupo">Alfabético</th>
+      <th>Letras</th>
+      <td>A B C D E … X Y Z AA AB AC AD AE …</td>
+    </tr>
+    <tr>
+      <th>Español</th>
+      <td>a be ce de e efe ge hache i jota ka ele eme eñe o pe cu erre
+ese te u uve <q>uve&nbsp;doble</q> equis ye zeta <q>a&nbsp;a</q> <q>a&nbsp;be</q>
+      <q>a&nbsp;ce</q> <q>a&nbsp;de</q> …</td>
+    </tr>
+    <tr>
+      <th>Griego</th>
+      <td>Alfa Beta Gamma Delta Épsilon Dseta Eta Theta Iota Kappa
+Lambda Mi Ni Xi Ómicron Pi Rho Sigma Tau Ípsilon Fi Ji Psi Omega …</td>
+    </tr>
+    <tr>
+      <th>Musical</th>
+      <td>Do Re Mi Fa Sol La Si <q>Do&nbsp;Do</q> <q>Do&nbsp;Re</q> …</td>
+    </tr>
+    <tr class="par">
+      <th>Radiofónico</th>
+      <td>Alfa Bravo Charlie Delta Echo Foxtrot Golf Hotel India Juliet
+Kilo Lima Mike November Oscar Papa Quebec Romeo Sierra Tango Uniform
+Victor Whiskey X-Ray Yankee Zulu …</td>
+    </tr>
+    <tr>
+      <th rowspan="9" class="tablagrupo">Cardinal</th>
+      <th>Alfaromano</th>
+      <td> I A Ai E Ei Ea Io O Oi Bi Ibi Abi Aibi Ebi Eibi Eabi Iobi
+Obi Oibi Ba Iba Aba Aiba …</td>
+    </tr>
+    <tr>
+      <th>Español</th>
+      <td>Uno Dos Tres Cuatro Cinco Seis Siete Ocho Nueve Diez …</td>
+    </tr>
+    <tr>
+      <th>Esperanto</th>
+      <td>Unu Du Tri Kvar Kvin Ses Sep Ok Naŭ Dek <q>Dek&nbsp;unu</q> <q>Dek&nbsp;du</q>
+…</td>
+    </tr>
+    <tr>
+      <th>Interlingua</th>
+      <td>Un Duo Tres Quatro Cinque Sex Septe Octo Nove Dece Dece-un
+Dece-duo …</td>
+    </tr>
+    <tr>
+      <th>Klingon</th>
+      <td>wa' cha' wej loS vagh jav Soch chorgh Hut wa'maH …</td>
+    </tr>
+    <tr>
+      <th>Japonés</th>
+      <td>Ichi Ni San Yon Go Roku Nana Hachi Kyū Jū Jū-ichi Jū-ni …</td>
+    </tr>
+    <tr>
+      <th>Latín</th>
+      <td>Unus Duo Tres Quattuor Quinque Sex Septem Octo Novem Decem …</td>
+    </tr>
+    <tr>
+      <th>Lojban</th>
+      <td>pa re ci vo mu xa ze bi so pano papa pare …</td>
+    </tr>
+    <tr>
+      <th>Sona</th>
+      <td>enna do tin ca pen xi zun atu nun dici ennadici dodici …</td>
+    </tr>
+    <tr>
+      <th rowspan="2" class="tablagrupo">Medición</th>
+      <th>Internacional</th>
+      <td> Un amperio, Dos amperios, Tres amperios, …</td>
+    </tr>
+    <tr>
+      <th>Temporal</th>
+      <td>Un&nbsp;día, Dos&nbsp;días, …
+Tres&nbsp;años&nbsp;y&nbsp;un&nbsp;día …</td>
+    </tr>
+    <tr>
+      <th rowspan="3" class="tablagrupo impar">Numeración</th>
+      <th>Arábigo</th>
+      <td>1 2 3 4 5 6 7 8 9 10 11 12 13 …</td>
+    </tr>
+    <tr>
+      <th>Hexadecimal</th>
+      <td>1 2 3 4 5 6 7 8 9 A B C E F 10 11 …</td>
+    </tr>
+    <tr>
+      <th>Romano</th>
+      <td> I II III IV V VI VII VIII IX X XI XII XIII …</td>
+    </tr>
+    <tr>
+      <th class="tablagrupo par">Ordinal</th>
+      <th>Español</th>
+      <td>Primero Segundo Tercero Cuarto Quinto Sexto Séptimo …</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Ejemplos </h3>
+<table class="tabla">
+  <thead> <tr>
+    <th>Tipo</th>
+    <th>Nombre</th>
+    <th>11.111</th>
+    <th>999.999</th>
+    <th>12.300.050</th>
+  </tr>
+  </thead> <tbody>
+    <tr>
+      <th rowspan="5" class="tablagrupo">Alfabético</th>
+      <th>Letras</th>
+      <td>ÑFN</td>
+      <td>AVTRZ</td>
+      <td>VCWMK</td>
+    </tr>
+    <tr>
+      <th>Español</th>
+      <td>eñe efe ene</td>
+      <td>a uve te erre zeta</td>
+      <td>uve ce uve doble eme ka</td>
+    </tr>
+    <tr>
+      <th>Griego</th>
+      <td>Tau Dseta Psi</td>
+      <td>Beta Omega Theta Beta Ómicron</td>
+      <td>Alfa Ni Alfa Sigma Dseta Beta</td>
+    </tr>
+    <tr>
+      <th>Musical</th>
+      <td>Fa Fa Re Sol Re</td>
+      <td>Do Do Mi Mi Mi Re Si Si</td>
+      <td>Do Si La Mi Sol La Do Re Si</td>
+    </tr>
+    <tr class="par">
+      <th>Radiofónico</th>
+      <td>Papa Kilo India</td>
+      <td>Bravo Delta Whiskey Golf Mike</td>
+      <td>Zulu Whiskey Uniform Hotel Victor</td>
+    </tr>
+    <tr>
+      <th rowspan="9" class="tablagrupo">Cardinal</th>
+      <th>Alfaromano</th>
+      <td>Ibizidifi</td>
+      <td>Oiboizoidoifoijoi</td>
+      <td>Beijaikali</td>
+    </tr>
+    <tr>
+      <th>Español</th>
+      <td>Once mil ciento once</td>
+      <td>Novecientos noventa y nueve mil novecientos noventa y nueve</td>
+      <td>Doce millones trescientos mil cincuenta</td>
+    </tr>
+    <tr>
+      <th>Esperanto</th>
+      <td>Dek unu mil cent dek unu</td>
+      <td>Naŭcent naŭdek naŭ mil naŭcent naŭdek naŭ</td>
+      <td>Dek du miliono tricent mil kvindek</td>
+    </tr>
+    <tr>
+      <th>Interlingua</th>
+      <td>Dece-un milles cento dece-un</td>
+      <td>Nove centos novanta-nove milles nove centos novanta-nove</td>
+      <td>Dece-duo milliones tres centos milles cinquanta</td>
+    </tr>
+    <tr>
+      <th>Klingon</th>
+      <td>wa’netlh wa’SaD wa’vatlh wa’maH wa’</td>
+      <td>HutbIp Hutnetlh HutSaD Hutvatlh HutmaH Hut</td>
+      <td>?</td>
+    </tr>
+    <tr>
+      <th>Japonés</th>
+      <td>Ichi-man sen hyaku jū-ichi</td>
+      <td>Kyū-jū kyū man kyū-sen kyū-hyaku kyū-jū kyū</td>
+      <td>Sen ni-hyaku san-jū man go-jū</td>
+    </tr>
+    <tr>
+      <th>Latín</th>
+      <td>Undecim milia centum undecim</td>
+      <td>Nongenti undecentum milia nongenti undecentum</td>
+      <td>?</td>
+    </tr>
+    <tr>
+      <th>Lojban</th>
+      <td>papapapapa</td>
+      <td>sosososososo</td>
+      <td>parecinononomuno</td>
+    </tr>
+    <tr>
+      <th>Sona</th>
+      <td>ennadicitan son ennadici</td>
+      <td>nunson nunyedinuntan nunson nunyedinun</td>
+      <td>dodicitanta tinsontan penyedi</td>
+    </tr>
+    <tr>
+      <th rowspan="2" class="tablagrupo">Medición</th>
+      <th>Internacional</th>
+      <td>Once kilometros y ciento once metros</td>
+      <td>Novecientos noventa y nueve kilogramos y novecientos noventa
+y nueve gramos</td>
+      <td>Doce megabytes, trescientos kilobytes y cincuenta bytes</td>
+    </tr>
+    <tr>
+      <th>Temporal</th>
+      <td>Tres décadas, cinco meses, una semana y cuatro días</td>
+      <td>Dos milenios, siete siglos, tres décadas, un lustro, cuatro
+años, ocho meses, tres semanas y tres días</td>
+      <td>Treinta y tres milenios, seis siglos, nueve décadas, un
+lustro, un trienio, nueve meses, una semana y tres días</td>
+    </tr>
+    <tr>
+      <th rowspan="3" class="tablagrupo impar">Numeración</th>
+      <th>Arábigo</th>
+      <td>11111</td>
+      <td>999999</td>
+      <td>12300050</td>
+    </tr>
+    <tr>
+      <th>Hexadecimal</th>
+      <td>2B67</td>
+      <td>F423F</td>
+      <td>BBAF12</td>
+    </tr>
+    <tr>
+      <th>Romano</th>
+      <td>(X)MCXI</td>
+      <td>(CMXC)M(X)CMXCIX</td>
+      <td>((X)MMCCC)L</td>
+    </tr>
+    <tr>
+      <th class="tablagrupo par">Ordinal</th>
+      <th>Español</th>
+      <td>Undécimo milésimo centésimo undécimo</td>
+      <td>Noningentésimo nonagésimo noveno milésimo noningentésimo
+nonagésimo noveno</td>
+      <td>Duodécimo millonésimo tricentésimo milésimo quincuagésimo</td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+<h2>Código fuente</h2>
+<ul class="files_list">
+  <li><a href="%5B%5BBASE_URL%5D%5DAzar.vb">Azar.vb</a> — generación de
+números aleatorios</li>
+  <li><a href="%5B%5BBASE_URL%5D%5DBDAzar.vb">BDAzar.vb</a> —
+generación de la base de datos aleatoria</li>
+  <li><a href="%5B%5BBASE_URL%5D%5DRecursos.vb">Recursos.vb</a> — datos
+compartidos</li>
+  <li><a href="%5B%5BBASE_URL%5D%5DUtilidades.vb">Utilidades.vb</a> —
+funciones de uso genérico</li>
+</ul>
+<h3>vbArchivos</h3>
+<ul class="files_list">
+  <li><a href="%5B%5BBASE_URL%5D%5D/vbArchivos/FormatoAbstracto.vb">FormatoAbstracto.vb</a>
+— plantilla del formato de exportación</li>
+  <li><a href="%5B%5BBASE_URL%5D%5D/vbArchivos/FormatosArchivo.vb">FormatosArchivo.vb</a>
+— ArchivoCSV, ArchivoTAB, ArchivoJSON, … </li>
+  <li><a href="%5B%5BBASE_URL%5D%5D/vbArchivos/Permanencia.vb">Permanencia.vb</a>
+— guardar/recuperar datos del programa en INI</li>
+  <li><a href="%5B%5BBASE_URL%5D%5D/vbArchivos/PermanenciaPrograma.vb">PermanenciaPrograma.vb</a>
+— datos entre sesiones de este programa</li>
+</ul>
+<h3>vbCampos</h3>
+<ul class="files_list">
+  <li><a href="%5B%5BBASE_URL%5D%5D/vbCampos/CampoAbstracto.vb">CampoAbstracto.vb</a>
+— base de los campos predefinidos y definidos</li>
+  <li><a href="%5B%5BBASE_URL%5D%5D/vbCampos/CamposDefinidos.vb">CamposDefinidos.vb</a>
+— CampoCodigo, CampoLista, CampoRango, …</li>
+  <li><a href="%5B%5BBASE_URL%5D%5D/vbCampos/CamposPredefinidos.vb">CamposPredefinidos.vb</a>
+— CampoId, CampoNombre, CampoApellido, …</li>
+  <li><a href="%5B%5BBASE_URL%5D%5D/vbCampos/Diccionarios.vb">Diccionarios.vb</a>
+— datos en formato de diccionario</li>
+</ul>
+<h3>vbFormularios</h3>
+<ul class="files_list">
+  <li><a href="%5B%5BBASE_URL%5D%5D/vbFormularios/CajasDialogo.vb">CajasDialogo.vb</a>
+— muestra cajas de confirmación y error</li>
+  <li><a href="%5B%5BBASE_URL%5D%5D/vbFormularios/FormCampo.Designer.vb">FormCampo.Designer.vb</a>
+— diseño del formulario </li>
+  <li><a href="%5B%5BBASE_URL%5D%5D/vbFormularios/FormCampo.resx">FormCampo.resx</a>
+— recursos del formulario</li>
+  <li><a href="%5B%5BBASE_URL%5D%5D/vbFormularios/FormCampo.vb">FormCampo.vb</a>
+— código del formulario</li>
+  <li><a href="%5B%5BBASE_URL%5D%5D/vbFormularios/FormGenerar.Designer.vb">FormGenerar.Designer.vb</a>
+— diseño del formulario </li>
+  <li><a href="%5B%5BBASE_URL%5D%5D/vbFormularios/FormGenerar.resx">FormGenerar.resx</a>
+— recursos del formulario</li>
+  <li><a href="%5B%5BBASE_URL%5D%5D/vbFormularios/FormGenerar.vb">FormGenerar.vb</a>
+— código del formulario</li>
+  <li><a href="%5B%5BBASE_URL%5D%5D/vbFormularios/FormUtils.vb">FormUtils.vb</a>
+— utilidades genéricas de formulario</li>
+</ul>
+<h3>vbNumerales</h3>
+<ul class="files_list">
+  <li><a href="%5B%5BBASE_URL%5D%5D/vbNumerales/Apalabrado.vb">Apalabrado.vb</a>
+— una palabra con su género y número</li>
+  <li><a href="%5B%5BBASE_URL%5D%5D/vbNumerales/CifrasEnLetras.vb">CifrasEnLetras.vb</a>
+— cardinal en español</li>
+  <li><a href="%5B%5BBASE_URL%5D%5D/vbNumerales/NumeracionAlfaromana.vb">NumeracionAlfaromana.vb</a>
+— </li>
+  <li><a href="%5B%5BBASE_URL%5D%5D/vbNumerales/NumeracionEsperanto.vb">NumeracionEsperanto.vb</a>
+— </li>
+  <li><a href="%5B%5BBASE_URL%5D%5D/vbNumerales/NumeracionInterlingua.vb">NumeracionInterlingua.vb</a>
+— </li>
+  <li><a href="%5B%5BBASE_URL%5D%5D/vbNumerales/NumeracionInternacional.vb">NumeracionInternacional.vb</a>
+— </li>
+  <li><a href="%5B%5BBASE_URL%5D%5D/vbNumerales/NumeracionJaponesa.vb">NumeracionJaponesa.vb</a>
+— </li>
+  <li><a href="%5B%5BBASE_URL%5D%5D/vbNumerales/NumeracionKlingon.vb">NumeracionKlingon.vb</a>
+— </li>
+  <li><a href="%5B%5BBASE_URL%5D%5D/vbNumerales/NumeracionLatin.vb">NumeracionLatin.vb</a>
+— </li>
+  <li><a href="%5B%5BBASE_URL%5D%5D/vbNumerales/NumeracionOrdinal.vb">NumeracionOrdinal.vb</a>
+— </li>
+  <li><a href="%5B%5BBASE_URL%5D%5D/vbNumerales/NumeracionRomana.vb">NumeracionRomana.vb</a>
+— </li>
+  <li><a href="%5B%5BBASE_URL%5D%5D/vbNumerales/NumeracionSona.vb">NumeracionSona.vb</a>
+— </li>
+  <li><a href="%5B%5BBASE_URL%5D%5D/vbNumerales/NumeracionTemporal.vb">NumeracionTemporal.vb</a>
+— </li>
+  <li><a href="%5B%5BBASE_URL%5D%5D/vbNumerales/Numeral.vb">Numeral.vb</a>
+— secuencias de números, letras, etc.</li>
+</ul>
+<h3>vbVectores</h3>
+<ul class="files_list">
+  <li><a href="%5B%5BBASE_URL%5D%5D/vbVectores/Valores.vb">Valores.vb</a>
+— ValorProvincia, ValorMunicipio, …</li>
+  <li><a href="%5B%5BBASE_URL%5D%5D/vbVectores/VectorAbstracto.vb">VectorAbstracto.vb</a>
+— gestión estadística de los recursos</li>
+  <li><a href="%5B%5BBASE_URL%5D%5D/vbVectores/Vectores.vb">Vectores.vb</a>
+— VectorNombre, VectorApellidos, …</li>
+</ul>
+<h3>Recursos</h3>
+<ul class="files_list">
+  <li><a href="%5B%5BBASE_URL%5D%5D/Resources/array_adjetivos.csv">array_adjetivos.csv</a>
+— </li>
+  <li><a href="%5B%5BBASE_URL%5D%5D/Resources/array_apellidos.csv">array_apellidos.csv</a>
+— </li>
+  <li><a href="%5B%5BBASE_URL%5D%5D/Resources/array_comunes.csv">array_comunes.csv</a>
+— palabras más comunes</li>
+  <li><a href="%5B%5BBASE_URL%5D%5D/Resources/array_definidos.csv">array_definidos.csv</a>
+— lista de campos definidos por omisión</li>
+  <li><a href="%5B%5BBASE_URL%5D%5D/Resources/array_municipios.csv">array_municipios.csv</a>
+— </li>
+  <li><a href="%5B%5BBASE_URL%5D%5D/Resources/array_nombres.csv">array_nombres.csv</a>
+— </li>
+  <li><a href="%5B%5BBASE_URL%5D%5D/Resources/array_paises.csv">array_paises.csv</a>
+— </li>
+  <li><a href="%5B%5BBASE_URL%5D%5D/Resources/array_palabras.csv">array_palabras.csv</a>
+— </li>
+  <li><a href="%5B%5BBASE_URL%5D%5D/Resources/array_provincias.csv">array_provincias.csv</a>
+— </li>
+</ul>
+<h2>Jerarquía de clases</h2>
+<h3>Clases de los vectores</h3>
+<ul>
+  <li>EnumSexo (enumeración)</li>
+  <li>VectorAzarAbastracto(Of ValorVector)
+    <ul>
+      <li>VectorNombres</li>
+      <li>VectorApellidos</li>
+      <li>VectorMunicipios</li>
+      <li>VectorProvincias</li>
+      <li>VectorPalabrasComunes</li>
+      <li>VectorPalabras</li>
+      <li>VectorAdjetivos</li>
+      <li>VectorDefinidosPredeterminados</li>
+    </ul>
+  </li>
+  <li>ValorVector
+    <ul>
+      <li>ValorProvincia</li>
+      <li>ValorMunicipio</li>
+      <li>ValorNombre</li>
+      <li>ValorApellido</li>
+      <li>ValorPalabraComun</li>
+      <li>ValorPalabra</li>
+      <li>ValorAdjetivo</li>
+      <li>ValorCampoDefinido</li>
+    </ul>
+  </li>
+</ul>
+<h3>Clases de los numerales</h3>
+<ul>
+  <li>Numerales (enumeración)</li>
+  <li>INumeral </li>
+  <li>IApalabrado</li>
+  <li>NumeralAbstracto ← <em>INumeral</em>
+    <ul>
+      <li>NumeralArray
+        <ul>
+          <li>NumeralAlfabeticoEspañol</li>
+          <li>NumeralGriego</li>
+          <li>NumeralMusical</li>
+          <li>NumeralRadiofonico</li>
+        </ul>
+      </li>
+      <li>NumeralAlfabetico</li>
+      <li>NumeralAlfaromano</li>
+      <li>NumeralArabigo</li>
+      <li>NumeralEspañol ← <em>IApalabrado</em></li>
+      <li>NumeralEsperanto</li>
+      <li>NumeralHexadedimal</li>
+      <li>NumeralInterlingua</li>
+      <li>NumeralInternacional ← <em>IApalabrado</em></li>
+      <li>NumeralKlingon</li>
+      <li>NumeralJapones</li>
+      <li>NumeralLatin</li>
+      <li>NumeralOrdinalEspañol ← <em>IApalabrado</em></li>
+      <li>NumeralRomano</li>
+      <li>NumeralTemporal</li>
+      <li>NumeralSona</li>
+      <li>NumeralLojban</li>
+    </ul>
+  </li>
+  <li>Apalabrado ← <em>IApalabrado</em></li>
+</ul>
+<h3>Clases de las numeraciones</h3>
+<ul>
+  <li>CifrasEnLetras</li>
+  <li>NumeracionAlfaromana</li>
+  <li>NumeracionEsperanto</li>
+  <li>NumeracionInterlingua</li>
+  <li>NumeracionInternacional </li>
+  <li>NumeracionInternacionalEnCifras
+    <ul>
+      <li>NumeracionInternacionalEnLetras</li>
+    </ul>
+  </li>
+  <li>NumeracionJaponesa</li>
+  <li>NumeracionKlingon</li>
+  <li>NumeracionLatin</li>
+  <li>NumeracionLatinMasculino
+    <ul>
+      <li>NumeracionLatinNeutro</li>
+      <li>NumeracionLatinFemenino</li>
+    </ul>
+  </li>
+  <li>NumeracionOrdinal</li>
+  <li>NumeracionOrdinalEnNeutro
+    <ul>
+      <li>NumeracionOrdinalEnMasculino
+        <ul>
+          <li>NumeracionOrdinalEnFemenino</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>NumeracionRomana</li>
+  <li>NumeracionSona</li>
+  <li>NumeracionTemporal</li>
+  <li>NumeracionTemporalEnLetras
+    <ul>
+      <li>NumeracionTemporalEnCifras</li>
+    </ul>
+  </li>
+</ul>
+<h3> Clases de los campos</h3>
+<ul>
+  <li>TipoCampo (enumeración)</li>
+  <li>ICampo </li>
+  <li>IAnalizable</li>
+  <li>IReiniciable</li>
+  <li>CampoPredefinido ← <em>ICampo</em>
+    <ul>
+      <li>CampoDefinido ← <em>IAnalizable</em>
+        <ul>
+          <li>CampoCodigo</li>
+          <li>CampoLista</li>
+          <li>CampoRango</li>
+          <li>CampoMoneda</li>
+          <li>CampoFecha</li>
+          <li>CampoHora</li>
+          <li>CampoLogico</li>
+          <li>CampoTexo</li>
+          <li>CampoContador ← <em>IReiniciable</em></li>
+        </ul>
+      </li>
+      <li>CampoId ← <em>IReiniciable</em></li>
+      <li>CampoNombre</li>
+      <li>CampoApellido</li>
+      <li>CampoSexo</li>
+      <li>CampoNIF</li>
+      <li>CampoDireccion</li>
+      <li>CampoMunicipio</li>
+      <li>CampoProvincia</li>
+      <li>CampoCodigoPostal</li>
+      <li>CampoTelefono
+        <ul>
+          <li>CampoTelefonoFijo</li>
+        </ul>
+      </li>
+      <li>CampoCorreo</li>
+      <li>CampoNacimiento</li>
+      <li>CampoEdad</li>
+      <li>CampoMatricula</li>
+    </ul>
+  </li>
+</ul>
+<h3>Clases de los formatos de archivo</h3>
+<ul>
+  <li>FormatoAbstracto
+    <ul>
+      <li>ArchivoCSV</li>
+      <li>ArchivoTAB</li>
+      <li>ArchivoJSON</li>
+      <li>ArchivoXML</li>
+      <li>ArchivoHTML</li>
+      <li>ArchivoSQL</li>
+      <li>ArchivoXLS</li>
+      <li>ArchivoPRN</li>
+    </ul>
+  </li>
+</ul>
+<h3>Clases de la permanencia</h3>
+<ul>
+  <li>Permanencia
+    <ul>
+      <li>PermanenciaPrograma</li>
+    </ul>
+  </li>
+</ul>
+</div>
+
+</body></html>
